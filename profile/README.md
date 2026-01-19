@@ -1,16 +1,17 @@
 # SPRINT 4
 
-## CODE CONVENTIONS
-Composables: useComposableName.ts
-Components: PascalCase.vue
-Classes: PascalCase
-Routes: kebab-case
-Variables, Functions, Others: camelCase
+## Code conventions
+- Composables: useComposableName.ts
+- Components: PascalCase.vue
+- Classes: PascalCase
+- Routes: kebab-case
+- Variables, functions, others: camelCase
 
-Comments, file names and everything in english.
+- Comments, file names and all content must be in English.
 
-Commits:
-  Fix: Fixed the users CRUD
-  Feat: Added this CRUD to the backend
-  Refactor: Refactorized this
+## Commit messages
+Use concise, prefixed commit messages:
 
+- Fix: Fixed the users CRUD
+- Feat: Added this CRUD to the backend
+- Refactor: Refactorized this
