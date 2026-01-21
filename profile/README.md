@@ -1,27 +1,78 @@
-# Sprint 4 - SIMS Project
-## Introduction
-On this sprint we will take all the new things that we learned on the Sprint 3 and we will use them to create a new, better and more professional project. We are going to change the html, css and JavaScript frontend to a Vue, TypeScript and Tailwind one. We are also going to use Laravel instead of PHP for the backend and a PostgreSQL DB.
+# Sprint 4 – SIMS Project
 
-## Why ?
+## Overview
 
-### Why are we using a MultiTenant architecture:
-Our Web Application will be a SaaS (B2B, B2G), so...
+In this sprint, we take everything learned during **Sprint 3** and apply it to build a more robust, scalable, and professional application.
 
-## The implications of using a Single-Page-Application
-...
+The main goal is to modernize both the frontend and backend with this new stack:
 
-## Code conventions
-- Composables: useComposableName.ts
-- Components: PascalCase.vue
-- Classes: PascalCase
-- Routes: kebab-case
-- Variables, functions, others: camelCase
+- **Frontend**: migrate from plain HTML, CSS, and JavaScript to **Vue**, **TypeScript**, and **Tailwind CSS**
+- **Backend**: migrate from vanilla PHP to **Laravel**
+- **Database**: we are still going to use **PostgreSQL**
 
-- Comments, file names and all content must be in English.
+---
 
-## Commit messages
-Use concise, prefixed commit messages:
+## Architecture Decisions
 
-- Fix: Fixed the users CRUD
-- Feat: Added this CRUD to the backend
-- Refactor: Refactorized this
+### Multi-Tenant Architecture
+
+This application is designed as a **SaaS platform (B2B / B2G)**.
+
+We use a **multi-tenant architecture** to:
+
+- Centralize tenant management
+- Improve scalability
+- Simplify maintenance and deployments
+
+Each tenant is logically isolated while sharing the same database infrastructure.
+
+---
+
+### Single-Page Application (SPA)
+
+The frontend is implemented as a **Single-Page Application**.
+
+#### Implications
+- Using a SPA makes the page not indexable by google so we will need to develop a **Landing page** on the server side in order to be indexed by google
+---
+
+## Tech Stack
+
+### Frontend
+- Vue
+- TypeScript
+- Tailwind CSS
+
+### Backend
+- Laravel
+
+### Database
+- PostgreSQL
+
+---
+
+## Code Conventions
+
+To ensure consistency and readability across the project, the following conventions must be followed:
+
+- **Composables**: `useComposableName.ts`
+- **Components**: `PascalCase.vue`
+- **Classes**: `PascalCase`
+- **Routes**: `kebab-case`
+- **Variables, functions, others**: `camelCase`
+
+### General Rules
+- All comments, file names, and content **must be written in English**
+- Keep code clean, readable, and well-structured please
+
+---
+
+## Commit Messages
+
+Use concise and meaningful commit messages with the following prefixes:
+
+- **Fix**: `Fix: Fixed the users CRUD`
+- **Feat**: `Feat: Added users CRUD to the backend`
+- **Refactor**: `Refactor: Improved authentication logic`
+
+Commit messages should clearly describe **what** was changed and **why**, when relevant.
