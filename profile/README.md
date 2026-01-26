@@ -45,6 +45,8 @@ The frontend is implemented as a **Single-Page Application**.
 
 ### Backend
 - Laravel
+  - Spatie: Easy way to manage roles and permissions 
+  - Sanctum: Add's tokens
 
 ### Database
 - PostgreSQL
