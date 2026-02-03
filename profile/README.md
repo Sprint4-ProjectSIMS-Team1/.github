@@ -40,6 +40,9 @@ The frontend is implemented as a **Single-Page Application**.
 
 ### Frontend
 - Vue
+  - vue3-toastify: Add easy toast management
+  - @headlessui/vue:
+  - @heroicons/vue:
 - TypeScript
 - Tailwind CSS
 
