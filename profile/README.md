@@ -40,17 +40,21 @@ The frontend is implemented as a **Single-Page Application**.
 
 ### Frontend
 - Vue
-  - vue3-toastify: Add easy toast management
-  - @headlessui/vue: Add easy headless ui components management
-  - @heroicons/vue: Add easy heroicons management
 - TypeScript
 - Tailwind CSS
 
+#### Libraris
+- vue3-toastify: Add easy toast management. We created a useToast composable with a showToast function that takes the normal toast() functionality and adds some parameters, this is because we want all the toast to have the same look and behavior.
+- @headlessui/vue: Add easy headless ui components management
+- @heroicons/vue: Add easy heroicons management
+
 ### Backend
 - Laravel
-  - Spatie: Easy way to manage roles and permissions 
-  - Sanctum: Add's tokens
-
+  
+#### Libraris
+- Sanctum: Add's tokens and is in charge of the laravel security and authentication
+- Spatie: Easy way to manage roles and permissions, this library creates this tables: roles, permissions, role_has_permissions, model_has_roles and model_has_permissions. We are not using this last one because we want all our users to have a role.  
+  
 ### Database
 - PostgreSQL
 ---
