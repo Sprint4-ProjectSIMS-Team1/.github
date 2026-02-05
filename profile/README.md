@@ -47,6 +47,8 @@ The frontend is implemented as a **Single-Page Application**.
 - **vue3-toastify:** Add easy toast management. We created a useToast composable with a showToast function that takes the normal toast() functionality and adds some parameters, this is because we want all our error toast to have the same look and behavior. Anyways, we can use the normal toast() function and assign some parameters to it like this toast(message, {parameters}) to create new design for our toasts.
 - **@headlessui/vue:** Add easy headless ui components management
 - **@heroicons/vue:** Add easy heroicons management
+- **spatie/laravel-permission:** Implements a robust Role-Based Access Control (RBAC) system. We utilized this to manage authorization across our API, allowing us to assign roles (Admin, Client, Maintenance) and granular permissions (e.g., `can.activate.reservation`) to users. It integrates directly with Laravel's Policies and Gates, ensuring that logic like "only Admins can force-finish a trip" is decoupled from the main business logic.
+- **nesbot/carbon:** An API extension for PHP DateTime. This library is crucial in the `ReservationController` for handling time-sensitive operations. We use it to calculate the exact duration of trips (`diffInMinutes`) to compute the final cost, as well as to manage reservation deadlines (e.g., calculating if a reservation has expired by adding minutes to the `created_at` timestamp).
 
 ### Backend
 - Laravel
