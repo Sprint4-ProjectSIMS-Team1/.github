@@ -49,6 +49,8 @@ The frontend is implemented as a **Single-Page Application**.
 - **@heroicons/vue:** Add easy heroicons management
 - **spatie/laravel-permission:** Implements a robust Role-Based Access Control (RBAC) system. We utilized this to manage authorization across our API, allowing us to assign roles (Admin, Client, Maintenance) and granular permissions (e.g., `can.activate.reservation`) to users. It integrates directly with Laravel's Policies and Gates, ensuring that logic like "only Admins can force-finish a trip" is decoupled from the main business logic.
 - **nesbot/carbon:** An API extension for PHP DateTime. This library is crucial in the `ReservationController` for handling time-sensitive operations. We use it to calculate the exact duration of trips (`diffInMinutes`) to compute the final cost, as well as to manage reservation deadlines (e.g., calculating if a reservation has expired by adding minutes to the `created_at` timestamp).
+- **Leaflet (leaflet.js + leaflet.css):** Lightweight JavaScript library for interactive maps. We used Leaflet to render the main map and manage dynamic markers. It allows us to easily display geographic data, update marker positions in real time, and control map interactions such as zoom and pan.
+- **OpenStreetMap (Tile Provider):** Open-source map data used as the base tile layer. We configured Leaflet with an OpenStreetMap tile URL to provide the visual map layer without relying on proprietary services like Google Maps.
 
 ### Backend
 - Laravel
